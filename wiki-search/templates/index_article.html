@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>Wiki Search</title>
+
+
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.1/animate.min.css'>
+<link rel='stylesheet' href='https://git-icons-ohlbakmpxs.now.sh/flaticon.css'>
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.1/css/font-awesome.min.css'>
+<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Slabo+27px'>
+<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Lato'>
+
+      <link rel="stylesheet" href="./style.css">
+
+
+</head>
+
+<body>
+
+  <body>
+  <div class="container">
+    <header>
+      <h1>Stock Search</h1>
+    </header>
+    <div class="card search-card">
+      <form id='wiki-search-form'>
+        <input id='wiki-search' type="search" placeholder="Type Something Here" autocomplete="off" />
+      </form>
+      <a href="#"><i class='fa fa-search'></i></a>
+    </div>
+    <div class="info-text">
+      or read a
+    </div>
+    <div class="random-article">
+      <a   id='random-article'  target="_blank">Random Article</a>
+    </div>
+    <div class="content">
+      <div class="loading animated fadeIn">
+        <i class='fa fa-spin fa-spinner'></i>
+        <p>Loading Please Wait</p>
+      </div>
+    </div>
+    <div class="error animated">
+      Error...........
+    </div>
+    <footer>
+      <p>Made with <i class='fa fa-heart-o'></i> By Chinatelecom</p>
+    </footer>
+  </div>
+</body>
+  <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery.devbridge-autocomplete/1.2.24/jquery.autocomplete.min.js'></script>
+
+
+
+    <script  src="./article.js"></script>
+
+
+
+
+</body>
+
+</html>

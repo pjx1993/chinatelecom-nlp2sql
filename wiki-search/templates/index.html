@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>Wiki Search</title>
+
+
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.1/animate.min.css'>
+<link rel='stylesheet' href='https://git-icons-ohlbakmpxs.now.sh/flaticon.css'>
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.1/css/font-awesome.min.css'>
+<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Slabo+27px'>
+<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Lato'>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+
+
+</head>
+
+
+  <body>
+  <div class="container">
+    <header>
+      <h1>NLP 2 SQL</h1>
+    </header>
+    <div class="card search-card">
+      <form id='wiki-search-form'>
+        <input id='wiki-search' type="search" placeholder="Type Something Here" autocomplete="off" />
+      </form>
+      <a href="#"><i class='fa fa-search'></i></a>
+    </div>
+    <div class="info-text">
+
+    </div>
+    <div class="box">
+        <select id="select_box">
+    <option value="a7af9cba3b0611e9ac76f40f24344a08">货物类</option>
+    <option value="a7b1ce873b0611e9aa37f40f24344a08">经费类</option>
+    <option value="a7b5108c3b0611e98ad7f40f24344a08">招聘类</option>
+    <option value="a7b5f29c3b0611e9908bf40f24344a08">企业类</option>
+    <option value="a7baefae3b0611e9a879f40f24344a08">出版类</option>
+  </select>
+    </div>
+    <div class="content">
+      <div class="loading animated fadeIn">
+        <i class='fa fa-spin fa-spinner'></i>
+        <p>Loading Please Wait</p>
+      </div>
+    </div>
+    <div class="error animated">
+      Error...........
+    </div>
+    <footer>
+      <p>Made with <i class='fa fa-heart-o'></i> By Chinatelecom</p>
+    </footer>
+  </div>
+</body>
+  <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery.devbridge-autocomplete/1.2.24/jquery.autocomplete.min.js'></script>
+
+<script type=text/javascript src="{{
+  url_for('static', filename='js/script.js') }}"></script>
+
+
+
+
+
+</html>

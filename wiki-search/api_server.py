@@ -21,7 +21,7 @@ import tensorflow as tf
 
 
 import sys
- 
+
 sys.path.append('../')
 
 
@@ -47,6 +47,26 @@ def api_root():
 def parse_sql():
   table_id = request.json['table_id']
   question = request.json['question']
+
+  flag_childfind = 0
+  if table_id == 'device' :
+    matchObj = re.search( r'最(.*)手机是', question, re.M|re.I)
+    if matchObj:
+      str_match = matchObj.group()
+      str_mat_tmp = str_match.replace('手机','')+'多少'
+      question = question.replace(str_match,str_mat_tmp)
+      flag_childfind = 1
+      key_col_index = 5
+
+  if table_id == 'telbill' :
+    matchObj = re.search( r'最(.*)账期是', question, re.M|re.I)
+    if matchObj:
+      str_match = matchObj.group()
+      str_mat_tmp = str_match.replace('账期','')+'多少'
+      question = question.replace(str_match,str_mat_tmp)
+      flag_childfind = 1
+      key_col_index = 0
+
   test_json_line = '{\"question\": \"'+ question+'\",\"table_id\": \"'+table_id+'\"}'
   test_data = read_line(test_json_line, test_tables)
   print(test_json_line)
@@ -81,6 +101,14 @@ def parse_sql():
   header = test_tables.__getitem__(table_id)._df.columns.values.tolist()
   sql_gen = engine.execute(table_id, sql[0]['sel'], sql[0]['agg'], sql[0]['conds'], sql[0]['cond_conn_op'],header)
 
+  if flag_childfind==1 and sql[0]['agg'][0]>0:
+    #print(sql[0]['sel'])
+    header_index= int(sql[0]['sel'][0])
+    
+    childcol = header[header_index]
+    key_col = header[key_col_index]
+    sql_gen = 'select '+key_col + ' from Table_' + table_id + ' where '+childcol+'=( '+sql_gen+' )'
+
   return jsonify({'task': sql_gen})
 
 def load():
@@ -111,4 +139,4 @@ label_encoder = SqlLabelEncoder()
 
 if __name__ == "__main__":
     load()
-    app.run(host='0.0.0.0', port=18201)
+    app.run(host='0.0.0.0', port=19015)

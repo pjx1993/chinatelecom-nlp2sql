@@ -1,3 +1,21 @@
+{"question": "四川的用户数总计有多少", "table_id": "inter", "sql": {"agg": [5], "cond_conn_op": 0, "sel": [3], "conds": [[1, 2, "四川"]]}}
+{"question": "江苏的互联网专线平均ARP有多少", "table_id": "inter", "sql": {"agg": [1], "cond_conn_op": 1, "sel": [4], "conds": [[1, 2, "江苏"], [2, 2, "互联网专线"]]}}
+{"question": "2019年6月组网专线的最大户均ARPU是多少", "table_id": "inter", "sql": {"agg": [2], "cond_conn_op": 1, "sel": [4], "conds": [[0, 2, "2019年6月"], [2, 2, "组网专线"]]}}
+{"question": "四川省最小新增用户量为", "table_id": "5g", "sql": {"agg": [3], "cond_conn_op": 0, "sel": [3], "conds": [[0, 2, "四川"]]}}
+{"question": "江西省和安徽省总计终端销量为", "table_id": "5g", "sql": {"agg": [5], "cond_conn_op": 2, "sel": [2], "conds": [[0, 2, "山西"], [0, 2, "安徽"]]}}
+{"question": "11月11和11月14日新增的用户总量为", "table_id": "5g", "sql": {"agg": [5], "cond_conn_op": 2, "sel": [3], "conds": [[4, 2, "11月12日"], [4, 2, "11月14日"]]}}
+{"question": "浙江新增用户小于5000有哪几天", "table_id": "5g", "sql": {"agg": [0], "cond_conn_op": 1, "sel": [4], "conds": [[0, 2, "浙江"], [3, 1, "5000"]]}}
+{"question": "11月14日终端销量小于一万的有哪些省份,终端销量是多少", "table_id": "5g", "sql": {"agg": [0, 0], "cond_conn_op": 1, "sel": [0, 2], "conds": [[4, 2, "11月14日"], [2, 1, "10000"]]}}
+{"question": "应用处10点的任务有多少个", "table_id": "worktimeline", "sql": {"agg": [4], "cond_conn_op": 1, "sel": [0], "conds": [[2, 2, "10点"], [3, 2, "应用处"]]}}
+{"question": "管理处子任务超过10的任务为，开始时间是？", "table_id": "worktimeline", "sql": {"agg": [0, 0], "cond_conn_op": 1, "sel": [0, 2], "conds": [[1, 0, "10"], [3, 2, "管理处"]]}}
+{"question": "平台处的单个任务的平均子任务为", "table_id": "worktimeline", "sql": {"agg": [1], "cond_conn_op": 0, "sel": [1], "conds": [[3, 2, "平台处"]]}}
+{"question": "流量超过20G的账期是？", "table_id": "telbill", "sql": {"agg": [0], "cond_conn_op": 0, "sel": [0], "conds": [[1, 0, 20]]}}
+{"question": "2019年3月和2019年4月的话费总和是？", "table_id": "telbill", "sql": {"agg": [5], "cond_conn_op": 2, "sel": [3], "conds": [[0, 2, "2019年3月"], [0, 2, "2019年4月"]]}}
+{"question": "2018年7月的语音通话是多少分钟？", "table_id": "telbill", "sql": {"agg": [0], "cond_conn_op": 0, "sel": [2], "conds": [[0, 2, "2018年7月"]]}}
+{"question": "评分超85分且价格在6000以内的手机有哪个，是否支持volte", "table_id": "device", "sql": {"agg": [0, 0], "cond_conn_op": 1, "sel": [5, 3], "conds": [[7, 0, "85"], [6, 1, "6000"]]}}
+{"question": "2019年3月出厂支持全网通的手机有多少", "table_id": "device", "sql": {"agg": [4], "cond_conn_op": 1, "sel": [5], "conds": [[1, 2, "2019年3月"], [4, 2, "支持全网通"]]}}
+{"question": "支持volte的vivo手机评分最高是多少", "table_id": "device", "sql": {"agg": [2], "cond_conn_op": 1, "sel": [7], "conds": [[0, 2, "vivo"], [3, 2, "支持volte"]]}}
+{"question": "支持5G的手机最便宜的是多少钱", "table_id": "device", "sql": {"agg": [3], "cond_conn_op": 0, "sel": [6], "conds": [[2, 2, "支持5G"]]}}
 {"question": "长沙2011年平均每天成交量是3.17，那么近一周的成交量是多少", "table_id": "69cc8c0c334311e98692542696d6e445", "sql": {"agg": [0], "cond_conn_op": 1, "sel": [5], "conds": [[1, 2, "3.17"], [0, 2, "长沙"]]}}
 {"question": "2011年平均每天成交3.17的长沙在最近一个星期成交了多少", "table_id": "69cc8c0c334311e98692542696d6e445", "sql": {"agg": [0], "cond_conn_op": 1, "sel": [5], "conds": [[1, 2, "3.17"], [0, 2, "长沙"]]}}
 {"question": "你能不能帮我看一下2011年平均每天成交3.17的长沙近一周的成交量是多少啊", "table_id": "69cc8c0c334311e98692542696d6e445", "sql": {"agg": [0], "cond_conn_op": 1, "sel": [5], "conds": [[1, 2, "3.17"], [0, 2, "长沙"]]}}
